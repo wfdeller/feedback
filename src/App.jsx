@@ -1,10 +1,10 @@
-import { Layout, Typography, Tabs } from 'antd';
+import { Layout, Tabs } from 'antd';
 import FeedbackForm from './components/FeedbackForm';
 import FeedbackList from './components/FeedbackList';
+import Header from './components/Header';
 import './App.css';
 
-const { Header, Content } = Layout;
-const { Title } = Typography;
+const { Content } = Layout;
 
 function App() {
   // These would typically come from your app state or URL parameters
@@ -26,11 +26,7 @@ function App() {
 
   return (
     <Layout className="layout">
-      <Header className="header" style={{ width: '100%' }}>
-        <div style={{ maxWidth: '1400px', width: '100%', margin: '0 auto', display: 'flex' }}>
-          <Title level={2} style={{ color: 'white', margin: 0 }}>Feedback Portal</Title>
-        </div>
-      </Header>
+      <Header />
       <Content className="content">
         <div className="container">
           <Tabs 
